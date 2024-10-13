@@ -1,1 +1,36 @@
-<p>vehicle-edit works!</p>
+<div *ngIf="vehicle" class="container">
+    <h1 class="text-3xl font-bold">Editar Veículo</h1>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Placa</mat-label>
+      <input matInput [(ngModel)]="vehicle.placa">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Chassi</mat-label>
+      <input matInput [(ngModel)]="vehicle.chassi">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Renavam</mat-label>
+      <input matInput [(ngModel)]="vehicle.renavam">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Modelo</mat-label>
+      <input matInput [(ngModel)]="vehicle.modelo">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Marca</mat-label>
+      <input matInput [(ngModel)]="vehicle.marca">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Ano</mat-label>
+      <input matInput [(ngModel)]="vehicle.ano">
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="saveVehicle()">Salvar</button>
+  </div>
+  

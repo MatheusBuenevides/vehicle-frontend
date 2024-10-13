@@ -1,6 +1,6 @@
-<div class="container">
-  <h1>List of Vehicles</h1>
-  <table mat-table [dataSource]="vehicles" class="mat-elevation-z8">
+<div class="container mx-auto">
+  <h1 class="text-3xl font-bold mb-4">List of Vehicles</h1>
+  <table mat-table [dataSource]="vehicles" class="mat-elevation-z8 w-full">
     <!-- Placa Column -->
     <ng-container matColumnDef="placa">
       <th mat-header-cell *matHeaderCellDef> Placa </th>
@@ -19,7 +19,17 @@
       <td mat-cell *matCellDef="let vehicle"> {{vehicle.marca}} </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="['placa', 'modelo', 'marca']"></tr>
-    <tr mat-row *matRowDef="let row; columns: ['placa', 'modelo', 'marca'];"></tr>
+    <!-- Botão de Editar -->
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let vehicle">
+        <button mat-raised-button color="primary" [routerLink]="['/edit-vehicle', vehicle.id]">
+          Editar
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['placa', 'modelo', 'marca', 'edit']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['placa', 'modelo', 'marca', 'edit'];"></tr>
   </table>
 </div>
