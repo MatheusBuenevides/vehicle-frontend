@@ -1,1 +1,38 @@
-<p>vehicle-create works!</p>
+<div class="container mx-auto">
+    <h1 class="text-3xl font-bold">Criar Novo Veículo</h1>
+  
+    <form (ngSubmit)="createVehicle()">
+      <mat-form-field appearance="fill">
+        <mat-label>Placa</mat-label>
+        <input matInput [(ngModel)]="vehicle.placa" name="placa" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Chassi</mat-label>
+        <input matInput [(ngModel)]="vehicle.chassi" name="chassi" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Renavam</mat-label>
+        <input matInput [(ngModel)]="vehicle.renavam" name="renavam" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Modelo</mat-label>
+        <input matInput [(ngModel)]="vehicle.modelo" name="modelo" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Marca</mat-label>
+        <input matInput [(ngModel)]="vehicle.marca" name="marca" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Ano</mat-label>
+        <input matInput [(ngModel)]="vehicle.ano" name="ano" required type="number">
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Criar Veículo</button>
+    </form>
+  </div>
+  
