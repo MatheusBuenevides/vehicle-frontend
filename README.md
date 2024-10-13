@@ -87,7 +87,6 @@ Certifique-se de que o backend está rodando em `http://localhost:3000` para que
 - `/vehicles`: Página de listagem de veículos.
 - `/create-vehicle`: Página para criar um novo veículo.
 - `/edit-vehicle/:id`: Página para editar um veículo.
-- `/delete-vehicle/:id`: Página para excluir um veículo.
 
 ## Endpoints da API
 
@@ -95,7 +94,32 @@ O frontend está configurado para consumir os endpoints do backend, localizado e
 
 ## Testes
 
-Por enquanto, os testes não foram implementados. No entanto, eles podem ser adicionados utilizando o framework de testes do Angular (Karma/Jasmine) para garantir a qualidade do código.
+### Testes Unitários
+
+Os testes unitários foram implementados utilizando **Jasmine** e **Karma**, e cobrem as funcionalidades principais do frontend. O objetivo desses testes é garantir que todas as operações de CRUD e interações com a interface estejam funcionando corretamente.
+
+#### Testes Implementados:
+
+- **VehicleListComponent**:
+  - Verificação do carregamento correto da lista de veículos.
+  - Validação do filtro e da ordenação na tabela.
+  - Testes para a exclusão de veículos com feedback visual.
+- **VehicleCreateComponent**:
+  - Testes para garantir a criação de novos veículos e feedback de sucesso/erro.
+- **VehicleEditComponent**:
+  - Verificação da edição de veículos e feedback de sucesso/erro ao atualizar.
+- **VehicleService**:
+  - Testes para operações de **GET**, **POST**, **PUT** e **DELETE**, garantindo que as requisições HTTP sejam feitas corretamente e os dados tratados como esperado.
+
+#### Como Executar os Testes:
+
+1. Para executar todos os testes unitários, use o seguinte comando:
+
+```bash
+ng test
+```
+
+2. O Karma abrirá um navegador e rodará todos os testes automaticamente. Certifique-se de que todos os testes estão passando para garantir a integridade do sistema.
 
 ## Contribuição
 
@@ -111,5 +135,3 @@ Este projeto é licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE
 - **E-mail**: [matheusgomesbuenevides@gmail.com](mailto:matheusgomesbuenevides@gmail.com)
 
 ---
-
-Este README detalha o desenvolvimento até o momento, com a estrutura do projeto, tecnologias utilizadas e instruções de uso.
