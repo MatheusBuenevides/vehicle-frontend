@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-vehicle-list',
@@ -14,12 +15,13 @@ export class VehicleListComponent implements OnInit {
   vehicles: Vehicle[] = [];
   displayedColumns: string[] = ['placa', 'modelo', 'marca', 'ano', 'actions'];
   dataSource = new MatTableDataSource<Vehicle>();
-  
+
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  @ViewChild(MatTable, { static: false }) table!: MatTable<any>;  // Garantir que a tabela seja inicializada
 
   constructor(
-    private vehicleService: VehicleService, 
+    private vehicleService: VehicleService,
     private snackBar: MatSnackBar
   ) {}
 
@@ -32,6 +34,11 @@ export class VehicleListComponent implements OnInit {
       this.dataSource.data = data;
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+
+      // Verifique se a tabela foi inicializada antes de chamar renderRows()
+      if (this.table) {
+        this.table.renderRows();
+      }
     });
   }
 
