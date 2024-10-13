@@ -9,8 +9,9 @@ import { VehicleCreateComponent } from './components/vehicle-create/vehicle-crea
 import { VehicleEditComponent } from './components/vehicle-edit/vehicle-edit.component';
 import { VehicleDeleteComponent } from './components/vehicle-delete/vehicle-delete.component';
 
-import { AppRoutingModule } from './app-routing.module';  // Certifique-se de que o módulo de rotas foi importado
+import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,8 +26,9 @@ import { MaterialModule } from './material.module';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AppRoutingModule,  // Aqui o módulo de rotas é importado
-    MaterialModule
+    AppRoutingModule,
+    MaterialModule,
+    FormsModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
