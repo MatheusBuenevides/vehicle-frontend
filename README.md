@@ -6,9 +6,9 @@ Este é o frontend do sistema de **CRUD de veículos**, desenvolvido com **Angul
 ## Funcionalidades
 
 - **Listar veículos**: Exibe uma tabela com todos os veículos cadastrados.
-- **Criar veículos**: Formulário para cadastrar novos veículos.
-- **Editar veículos**: Permite a edição dos dados de um veículo já cadastrado.
-- **Excluir veículos**: Opção para deletar um veículo existente.
+- **Criar veículos**: Formulário para cadastrar novos veículos, com feedback visual de sucesso ou erro usando MatSnackBar.
+- **Editar veículos**: Permite a edição dos dados de um veículo já cadastrado, com feedback usando MatSnackBar.
+- **Excluir veículos**: Opção para deletar um veículo existente, com feedback de confirmação usando MatSnackBar.
 - **Navegação**: Um menu de navegação para acessar rapidamente as diferentes funcionalidades do CRUD.
 
 ## Tecnologias Utilizadas
@@ -29,7 +29,6 @@ vehicle-frontend/
 │   │   │   ├── vehicle-list/        # Página para listar veículos
 │   │   │   ├── vehicle-create/      # Página para criar um veículo
 │   │   │   ├── vehicle-edit/        # Página para editar um veículo
-│   │   │   ├── vehicle-delete/      # Página para excluir um veículo
 │   │   ├── services/                # Serviço HTTP para consumir API de veículos
 │   │   ├── material/                # Módulo do Angular Material
 │   ├── assets/

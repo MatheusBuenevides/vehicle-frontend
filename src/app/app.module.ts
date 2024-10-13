@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { VehicleListComponent } from './components/vehicle-list/vehicle-list.component';
 import { VehicleCreateComponent } from './components/vehicle-create/vehicle-create.component';
 import { VehicleEditComponent } from './components/vehicle-edit/vehicle-edit.component';
-import { VehicleDeleteComponent } from './components/vehicle-delete/vehicle-delete.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
@@ -19,8 +18,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     VehicleListComponent,
     VehicleCreateComponent,
-    VehicleEditComponent,
-    VehicleDeleteComponent
+    VehicleEditComponent
   ],
   imports: [
     BrowserModule,
