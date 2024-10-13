@@ -1,7 +1,6 @@
-<div class="container mx-auto">
+<div class="container mx-auto mt-4">
     <h1 class="text-3xl font-bold">Criar Novo Veículo</h1>
-  
-    <form (ngSubmit)="createVehicle()">
+    <form (ngSubmit)="createVehicle()" class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <mat-form-field appearance="fill">
         <mat-label>Placa</mat-label>
         <input matInput [(ngModel)]="vehicle.placa" name="placa" required>
